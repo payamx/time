@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/time/static/css/main.a060f8be.css",
-    "main.js": "/time/static/js/main.c18428b9.js",
+    "main.css": "/time/static/css/main.838d9ad5.css",
+    "main.js": "/time/static/js/main.ce209adb.js",
     "static/js/787.fef8cf2e.chunk.js": "/time/static/js/787.fef8cf2e.chunk.js",
     "static/media/time.jpg": "/time/static/media/time.d948d977c71e1afbd2c8.jpg",
     "static/media/Vazir-Light.woff": "/time/static/media/Vazir-Light.0dca866ad7c058dfadfb.woff",
@@ -13,12 +13,12 @@
     "static/media/Vazir-Variable.woff": "/time/static/media/Vazir-Variable.0066fe3c00bf5ffdbac8.woff",
     "static/media/glyphicons-halflings-regular.woff": "/time/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
     "index.html": "/time/index.html",
-    "main.a060f8be.css.map": "/time/static/css/main.a060f8be.css.map",
-    "main.c18428b9.js.map": "/time/static/js/main.c18428b9.js.map",
+    "main.838d9ad5.css.map": "/time/static/css/main.838d9ad5.css.map",
+    "main.ce209adb.js.map": "/time/static/js/main.ce209adb.js.map",
     "787.fef8cf2e.chunk.js.map": "/time/static/js/787.fef8cf2e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a060f8be.css",
-    "static/js/main.c18428b9.js"
+    "static/css/main.838d9ad5.css",
+    "static/js/main.ce209adb.js"
   ]
 }
