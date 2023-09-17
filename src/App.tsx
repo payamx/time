@@ -1,28 +1,29 @@
-import React, {useState,useEffect} from 'react';
+import React from 'react';
 import './App.css';
-import Header from "./component/Header";
+import layout from "./page/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./page/Layout";
 import Home from "./page/Home";
-import Footer from "./component/Footer";
-
 function App() {
 
 
     return (
 
-    <div dir="rtl"  className="App bg-mainbody dark:bg-darkback   ">
-        <div className="  ">
-            <Header/>
+    <>
+        <div >
+            <h1>salam</h1>
+
+
+            {/*<BrowserRouter>*/}
+            {/*    <Routes>*/}
+            {/*        /!*<Route path="/" index element={<Layout/>}/>*!/*/}
+            {/*    </Routes>*/}
+            {/*</BrowserRouter>*/}
+
 
         </div>
-        <div className=" -mt-14  ">
-            <Home/>
+    </>
 
-        </div>
-        <div className=" " >
-            <Footer/>
-        </div>
-
-    </div>
   );
 }
 

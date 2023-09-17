@@ -27,8 +27,6 @@ const ToggleButton = () => {
         } else {
             document.documentElement.classList.remove('dark')
         }
-        console.log(localStorage.theme)
-        console.log(document.documentElement.classList)
 
 
     };

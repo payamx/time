@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d4a40abe.css",
+    "main.js": "/static/js/main.a9f7b4a9.js",
+    "static/js/787.fef8cf2e.chunk.js": "/static/js/787.fef8cf2e.chunk.js",
+    "static/media/time.jpg": "/static/media/time.d948d977c71e1afbd2c8.jpg",
+    "static/media/Vazir-Light.woff": "/static/media/Vazir-Light.0dca866ad7c058dfadfb.woff",
+    "static/media/Vazir-Black.woff": "/static/media/Vazir-Black.5c64a4f969c07722d621.woff",
+    "static/media/Vazir-Bold.woff": "/static/media/Vazir-Bold.8a6538859ac709ea69b2.woff",
+    "static/media/Vazir-Medium.woff": "/static/media/Vazir-Medium.919d0807fe375342b619.woff",
+    "static/media/Vazir-Thin.woff": "/static/media/Vazir-Thin.99776ecc9f4323bb4002.woff",
+    "static/media/Vazir-Regular.woff": "/static/media/Vazir-Regular.f413b786be3bb85ed059.woff",
+    "static/media/Vazir-Variable.woff": "/static/media/Vazir-Variable.0066fe3c00bf5ffdbac8.woff",
+    "static/media/glyphicons-halflings-regular.woff": "/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
+    "index.html": "/index.html",
+    "main.d4a40abe.css.map": "/static/css/main.d4a40abe.css.map",
+    "main.a9f7b4a9.js.map": "/static/js/main.a9f7b4a9.js.map",
+    "787.fef8cf2e.chunk.js.map": "/static/js/787.fef8cf2e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4a40abe.css",
+    "static/js/main.a9f7b4a9.js"
+  ]
+}

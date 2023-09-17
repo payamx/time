@@ -192,7 +192,6 @@ const DateConvert = () => {
 
         selectChange({ target: { value: YearName } });
 
-        handleButtonClick()
 
     }, []);
 
