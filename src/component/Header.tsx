@@ -14,7 +14,7 @@ const Header = () => {
                             </div>
 
                             <div className=" flex flex-row  text-white  ">
-                                <img className="bottom" src={'/download.png'}  width="200px" height="100px"/>
+                                <img className="bottom" src={'download.png'}  width="200px" height="100px"/>
                             </div>
                         </div>
 

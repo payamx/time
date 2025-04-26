@@ -8,7 +8,6 @@ const DateConvert = () => {
         {key: "hijri", name: "قمری به خورشیدی و میلادی "}
     ];
 
-    const yearid = useId();
 
     let hijri = require('moment-hijri');
     const dayRef = useRef<HTMLSelectElement | null>(null);
@@ -30,13 +29,7 @@ const DateConvert = () => {
         val4: "", val5: "", val6: "",
 
     });
-    // input validation error
-    // const [error, setError] = useState<string>('');
-    // const validateDate = (year: string, month: string, day: string) => {
-    //     if (!year || !month || !day) {
-    //         setError('Please fill in all fields.');
-    //         return false;
-    //     }
+
 
 
     //form 31 days number
@@ -82,15 +75,47 @@ const DateConvert = () => {
 
 
     }
+    const initialConvertDate = () => {
+        const { year, month, day } = date;
+        if (!year || !month || !day) return;
 
+        switch (YearName) {
+            case "jalali":
+                const j_to_m_Number = moment.from(`${year}/${month}/${day}`, "fa", "YYYY/MM/DD")
+                    .locale("en").format("YYYY-MM-DD");
+                const j_to_m_word = moment.from(`${year}/${month}/${day}`, "fa", "YYYY/MM/DD")
+                    .locale("en").format('YYYY,MMMM dddd,D');
+                const j_to_j_Number = moment.from(`${year}/${month}/${day}`, "fa", "YYYY/MM/DD")
+                    .locale("fa").format("YYYY-MM-DD");
+                const j_to_j_word = moment.from(`${year}/${month}/${day}`, "fa", "YYYY/MM/DD")
+                    .locale("fa").format("YYYY,MMMM dddd,D");
+                const hijriDateObj = hijri(j_to_m_Number);
+                const j_to_h_number = hijriDateObj.format('iYYYY/iMM/iDD ');
+                const j_to_h_word = hijriDateObj.format('iYYYY/iMMMM/dddd ');
+
+                setConvert({
+                    val1: j_to_j_Number,
+                    val2: j_to_j_word,
+                    val3: j_to_m_Number,
+                    val4: j_to_m_word,
+                    val5: j_to_h_number,
+                    val6: j_to_h_word
+                });
+                break;
+
+            // you can do the same for "gregorian" and "hijri" if needed
+        }
+    };
+    useEffect(() => {
+        initialConvertDate(); // converts the date when `date` updates
+    }, [date]);
 
     //convert MULTIPLE date by input
-    const handleButtonClick = () => {
+    const handleConvertDate = () => {
 
         const getDayRef = dayRef.current?.value;
         const getMonthRef = monthRef.current?.value;
         const getYearRef = yearRef.current?.value;
-        console.log(getDayRef,getMonthRef,getYearRef)
 
         switch (YearName) {
             case "jalali":
@@ -189,11 +214,11 @@ const DateConvert = () => {
 
     };
     useEffect(() => {
-
+        let ignore:boolean = false
         selectChange({ target: { value: YearName } });
-
-
+        return () => { ignore = true };
     }, []);
+
 
     return (
         <>
@@ -259,10 +284,10 @@ const DateConvert = () => {
 
                     </div>
 
-                    <div className="my-6   mx-24 md:mx-0">
+                    <div className="my-6   md:space-x-5 ">
                         <label className="block md:text-start ">سال </label>
                         <input dir="ltr"
-                               className=" hover:bg-grey block px-12 md:px-7  border-2 border-gray-300
+                               className=" md:flex md:flex-wrap  mx-auto hover:bg-grey block   px-4 border-2 border-gray-300
                                dark:border-gray-600
                                rounded bg-white py-1 text-center dark:bg-darktop dark:text-white"
                                type="text" defaultValue={date.year || ''}  ref={yearRef}/>
@@ -271,13 +296,13 @@ const DateConvert = () => {
 
                         <button className="px-16 border-2 py-2 border-gray-300 rounded-2xl bg-browntime
                         dark:border-gray-600"
-                                    onClick={handleButtonClick}
+                                    onClick={handleConvertDate}
                         >تبدیل</button>
                     </div>
                 </div>
 
 
-                <div className="  md:flex justify-evenly bg-newgrey border border-2 m-6
+                <div className="  md:flex justify-evenly bg-newgrey  border-2 m-6
                  dark:border-gray-600 dark:bg-darkback dark:text-white">
 
 

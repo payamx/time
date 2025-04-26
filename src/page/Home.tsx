@@ -14,8 +14,8 @@ const Home = () => {
     return (
 
         <>
-            <div className=" font-vazir dark:shadow-cyan-400 shadow-2xl md:w-9/12  dark:border-x
-           dark:border-white rounded md:mx-auto     " id="top">
+            <div className=" font-vazir  dark:shadow-cyan-400 shadow-2xl   md:w-9/12
+            rounded md:mx-auto  " id="top">
 
 
                 <div className="bg-white border border-gray-300 shadow-xl dark:border-darkback rounded dark:bg-darktop
@@ -25,7 +25,7 @@ const Home = () => {
                         <Date/>
                     </div>
 
-                    <div className="md:flex md:flex-row  h-full mt-5  w-screen md:w-auto text-2xl items-center dark:bg-darktop ">
+                    <div className="md:flex md:flex-row  h-full mt-5 mx-3 w-screen md:w-auto text-2xl items-center  ">
                         <div className=" md:w-2/5   ">
 
                             <AnalogWatch/>

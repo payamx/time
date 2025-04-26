@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <>
 
-            <div className="flex justify-center  h-20 pt-10  dark:bg-darkback hover:animate-bounce"  onClick={scrollToTop} >
+            <div className="flex justify-center  h-20 pt-10  dark:bg-darkback animate-bounce"  onClick={scrollToTop} >
 
                 <IoIosArrowDropupCircle className="w-20 h-20 bg-mainbody text-browntime
                 rounded-full dark:shadow-cyan-400 dark:shadow-inner dark:bg-darkback" />
